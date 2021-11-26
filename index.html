@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructure tik tok</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app__videos">
+        <!-- video start -->
+        <div class="video" id="frist">
+            <video src="./assets/video2.mp4" class="video__player"></video>
+            
+            <!-- sidebr -->
+            <div class="videoSidebar">
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> favorite_border </span>
+                    <p>12</p>
+                </div>
+
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> textsms </span>
+                    <p>12</p>
+                </div>
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> reply </span>
+                    <p>25</p>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="videoFooter">
+                <div class="videoFooter__text">
+                    <h3>TEXT</h3>
+                    <p class="videoFooter__description">More text</p>
+
+                    <div class="videoFooter__ticker">
+                        <span class="material-icons videoFooter__icon"> music_note </span>
+                        <marquee> Song</marquee>
+                    </div>
+                </div>
+
+                <img src="https://static.thenounproject.com/png/934821-200.png" alt="" class="videoFooter__record">
+            </div>
+        </div>
+        <!-- video end -->
+
+        <!-- video start -->
+        <div class="video">
+            <video src="./assets/video1.mp4" class="video__player"></video>
+
+            <!-- sidebr -->
+            <div class="videoSidebar">
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> favorite_border </span>
+                    <p>12</p>
+                </div>
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> textsms </span>
+                    <p>12</p>
+                </div>
+                <div class="videoSidebar__button">
+                    <span class="material-icons"> reply </span>
+                    <p>25</p>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="videoFooter">
+                <div class="videoFooter__text">
+                    <h3>TEXT</h3>
+                    <p class="videoFooter__description">More text</p>
+
+                    <div class="videoFooter__ticker">
+                        <span class="material-icons videoFooter__icon"> music_note </span>
+                        <marquee> Song</marquee>
+                    </div>
+                </div>
+
+                <img src="https://static.thenounproject.com/png/934821-200.png" alt="" class="videoFooter__record">
+            </div>
+        </div>
+
+        <section id="contact" class="video">
+            <div class="header__contact">
+                <h5>Contact</h5>
+            </div>
+            <div class="container__contact">
+                <input type="text"  class="container__input">
+                <input type="text" class="container__input">
+                <textarea class="container__text"></textarea>
+                <button type="button">Contact</button>
+            </div>
+        </section>
+        <!-- video end -->
+    </div>
+    <!-- <div class="app__politics">
+        POLITIC
+    </div> -->
+    <div class="footer">
+        <a href="#frist"><span class="material-icons"> home </span></a>
+        <a class="footer__icon"><span class="material-icons"> explore </span></a>
+        <a class="footer__icon"><span class="material-icons"> inbox </span></a>
+        <a href="#contact" class="footer__icon"><span class="material-icons">contact_page</span></a>
+        <div class="footer__text">Home</div>
+        <div class="footer__text">Discover</div>
+        <div class="footer__text">About</div>
+        <div class="footer__text">contact</div>
+    </div>
+
+    <script>
+        const videos = document.querySelectorAll('video');
+        for (const video of videos) {
+            video.addEventListener('click', function () {
+                console.log('clicked');
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
