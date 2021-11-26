@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estructure tik tok</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <div class="app__videos">
         <!-- video start -->
         <div class="video" id="frist">
-            <video src="./assets/video2.mp4" class="video__player"></video>
+            <video src="./src/assets/video2.mp4" class="video__player"></video>
             
             <!-- sidebr -->
             <div class="videoSidebar">
@@ -55,7 +55,7 @@
 
         <!-- video start -->
         <div class="video">
-            <video src="./assets/video1.mp4" class="video__player"></video>
+            <video src="./src/assets/video1.mp4" class="video__player"></video>
 
             <!-- sidebr -->
             <div class="videoSidebar">
@@ -94,20 +94,20 @@
                 <h5>Contact</h5>
             </div>
             <div class="container__contact">
-                <div class="container__form">
+                <div class="container__group">
                     <label for="name">Name</label>
                     <input type="text" placeholder="Name" id="name" class="container__input">
                 </div>
-                <div class="container__form">
+                <div class="container__group">
                     <label for="email">Email</label>
                     <input type="text" placeholder="Email" id="email" class="container__input">
                 </div>
-                <div class="container__form">
+                <div class="container__group">
                     <label for="Message">Message</label>
                     <textarea class="container__input textarea" placeholder="Message" id="Message"></textarea>
                 </div>
              
-                <button type="button">Contact</button>
+                <button type="button"class="form__button" onclick="sendMail();">Contact</button>
             </div>
         </section>
         <!-- video end -->
@@ -126,19 +126,8 @@
         <div class="footer__text">contact</div>
     </div>
 
-    <script>
-        const videos = document.querySelectorAll('video');
-        for (const video of videos) {
-            video.addEventListener('click', function () {
-                console.log('clicked');
-                if (video.paused) {
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-        }
-    </script>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/mail.js"></script>
 </body>
 
 </html>
