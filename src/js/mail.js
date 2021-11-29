@@ -1,28 +1,39 @@
+$(document).ready(function(e){
+   
+    // Submit form data via Ajax
+    $("#contactFrm").on('submit', function(e){
+        // document.querySelector('.contact .cta--submit span').innerHTML = 'Sending'; 
+        // document.querySelectorAll('.contact__error').forEach((item) => {
+        //     item.innerHTML = '';
+        // });
+        e.preventDefault();
 
+        $.ajax({
+            type: 'POST',
+            url: 'sendMail.php',
+            data: new FormData(this),
+            dataType: 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function(response){ 
+                // document.querySelector('.contact .cta--submit span').innerHTML = 'Contact Us'; 
 
-function sendMail (){
-    const nodemailer = require('nodemailer');
+                // if(response.status && response.status == 1) {  
+                //     document.querySelector('.contact .cta--submit').classList.add('cta--success');
+                //     document.querySelector('.contact .cta--submit span').innerHTML = 'Message sent';
+                //     document.querySelector('.contact .cta--submit').setAttribute('disabled', true);
+                //     return true;
+                // }
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
-    auth: {
-      user: "15402a909b996f",
-      pass: "32e611e5b52571"
-    }
-});
-
-    transporter.sendMail({
-        from: '"Me" <web@121corp.mx>',
-        to: "rtapia@121corp.com",
-        subject: "holis",
-        text: "Test de envio de correo perron",
-        html: "<b>Test de envio de correo perron</b>"
-    }).then(info => {
-        console.log({info});
-    }).catch(console.log());
+                // Object.keys(response).forEach((key) => {
+                //     document.querySelector(`.contact__error[data-name=${key}]`).innerHTML = response[key];
+                // });
+            }, 
+            error: function(error) {
+                console.log(JSON.stringify(error,null,2))
+            }
+        });
     
-}
-
-
-//transporter.verify().then(console.log).catch(console.error);
+    });
+});

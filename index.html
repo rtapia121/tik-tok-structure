@@ -93,22 +93,25 @@
             <div class="header__contact">
                 <h5>Contact</h5>
             </div>
-            <div class="container__contact">
-                <div class="container__group">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Name" id="name" class="container__input">
+            <form id="contactFrm">
+                <div class="container__contact">
+                    <div class="container__group">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Name" id="name" name="name" class="container__input">
+                    </div>
+                    <div class="container__group">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Email" id="email" name="email" class="container__input">
+                    </div>
+                    <div class="container__group">
+                        <label for="Message">Message</label>
+                        <textarea class="container__input textarea" placeholder="Message" name="message" id="message"></textarea>
+                    </div>
+                 
+                     <button type="submit" id="btnSend" class="form__button">Contact</button>
                 </div>
-                <div class="container__group">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Email" id="email" class="container__input">
-                </div>
-                <div class="container__group">
-                    <label for="Message">Message</label>
-                    <textarea class="container__input textarea" placeholder="Message" id="Message"></textarea>
-                </div>
-             
-                <button type="button"class="form__button" onclick="sendMail();">Contact</button>
-            </div>
+            </form>
+      
         </section>
         <!-- video end -->
     </div>
@@ -125,6 +128,8 @@
         <div class="footer__text">About</div>
         <div class="footer__text">contact</div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script src="./src/js/main.js"></script>
     <script src="./src/js/mail.js"></script>
