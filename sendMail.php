@@ -98,17 +98,13 @@ function sendMailThankYou($email, $name)
     // }
 }
 
-function template($name, $email, $comments)
+function template($name, $email, $message)
 {
     $elementReplace  = array();
-    $elementReplace[0] = '%%NAME%%';
-    $elementReplace[1] = '%%EMIL%%';
-    $elementReplace[2] = '%%COMMENTS%%';
-
     $substituteselements = array();
-    $substituteselements[0] = $name;
-    $substituteselements[1] = $email;
-    $substituteselements[2] = $comments;
+
+    array_push($elementReplace,'%%NAME%%','%%EMIL%%','%%COMMENTS%%');
+    array_push($substituteselements,$name,$email,$message);
 
     $html =  htmlentities(file_get_contents('./notification.html', true));
     $templateString = str_replace($elementReplace, $substituteselements, $html);
