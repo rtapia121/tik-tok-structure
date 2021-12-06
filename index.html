@@ -60,7 +60,7 @@
             <!-- sidebr -->
             <div class="videoSidebar">
                 <div class="videoSidebar__button">
-                    <span class="material-icons"> favorite_border </span>
+                    <span class="material-icons"> favorite_border </span> 
                     <p>12</p>
                 </div>
                 <div class="videoSidebar__button">
@@ -95,23 +95,39 @@
             </div>
             <form id="contactFrm">
                 <div class="container__contact">
-                    <div class="container__group">
-                        <label for="name">Name</label>
-                        <input type="text" placeholder="Name" id="name" name="name" class="container__input">
-                    </div>
-                    <div class="container__group">
-                        <label for="email">Email</label>
-                        <input type="text" placeholder="Email" id="email" name="email" class="container__input">
-                    </div>
-                    <div class="container__group">
-                        <label for="Message">Message</label>
-                        <input class="container__input textarea" placeholder="Message" name="message" id="message" />
-                    </div>
-                 
+                    <label for="">
+                        <span>Name</span>
+                        <div class="container__group">
+                            <input type="text" placeholder="Name" id="name" name="name" class="container__input">
+                        </div>
+                    </label>
+                    <label for="">
+                        <span> Email</span>
+                        <div class="container__group">
+                            <input type="text" placeholder="Email" id="email" name="email" class="container__input">
+                        </div>
+                    </label>
+                    <label for="">
+                        <span>Message</span>
+                        <div class="container__group">
+                            <input class="container__input textarea" placeholder="Message" name="message" id="message" />
+                        </div>
+                    </label>
+                    
+                
+           
                      <button type="submit" id="btnSend" class="form__button">Contact</button>
                 </div>
             </form>
       
+        </section>
+
+        <section id="about" class="video">
+            <div class="header__contact">
+                <h5>Contact</h5>
+            </div>
+            <p></p>    
+
         </section>
         <!-- video end -->
     </div>
@@ -120,11 +136,11 @@
     </div> -->
     <div class="footer">
         <a href="#frist"><span class="material-icons"> home </span></a>
-        <a class="footer__icon"><span class="material-icons"> explore </span></a>
-        <a class="footer__icon"><span class="material-icons"> inbox </span></a>
+        <a href="#politics" class="footer__icon"><span class="material-icons">gavel</span></a>
+        <a href="#about" class="footer__icon"><span class="material-icons"> inbox </span></a>
         <a href="#contact" class="footer__icon"><span class="material-icons">contact_page</span></a>
         <div class="footer__text">Home</div>
-        <div class="footer__text">Discover</div>
+        <div class="footer__text">Politics</div>
         <div class="footer__text">About</div>
         <div class="footer__text">contact</div>
     </div>
