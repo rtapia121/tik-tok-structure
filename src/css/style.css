@@ -19,7 +19,7 @@ body {
 
 .app__videos {
   position: relative;
-  height: 750px;
+  height: 100vh;
   background-color: white;
   overflow: scroll;
   width: 100%;
@@ -132,15 +132,15 @@ body {
 
 .footer {
   width: 100%;
-  position: -webkit-fixed;
   position: fixed;
-  top: 100%;
+  top: 93%;
   background-color: #000000;
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding: 10px; 
   text-align: center;
   font-weight: bold;
+  max-width: 450px;
 }
 
 .footer__icon{
@@ -155,17 +155,11 @@ body {
  margin: 0;
 }
 
-.app__politics {
-  position: relative;
-  height: 750px;
-  background-color: white;
-  overflow: scroll;
-  width: 100%;
-  max-width: 400px;
-  scroll-snap-type: x mandatory;
-  border-radius: 20px;
-}
-
+/* @media (max-height: 800px) {
+  .footer{
+    top: 94%;
+  }
+} */
 
 
 .header__contact{
@@ -244,3 +238,13 @@ body {
 .footer a:link:active, a:visited:active{
   color: white;
 }
+
+
+#about p, #politics p{
+    margin: 10px;
+    text-align: justify;
+    padding: 25px;
+    font-size: 20px;
+    color: #414042;
+}
+
