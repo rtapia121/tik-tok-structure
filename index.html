@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    <div class="app__videos">
+    <div class="app__videos" id="videos">
         <!-- video start -->
-        <div class="video" id="frist">
-            <video preload="metadata" autoplay loop muted class="video__player">
+        <div class="video" id="home">
+            <video preload="metadata" autoplay loop muted playsinline class="video__player">
                 <source src="https://pic.pikbest.com/01/07/43/70y888piCZW8.mp4" type="video/mp4">
             </video>
 
@@ -30,7 +30,7 @@
 
                 <div class="videoSidebar__button">
                     <span class="material-icons"> textsms </span>
-                    <p>12</p>
+                    <p>15</p>
                 </div>
                 <div class="videoSidebar__button">
                     <span class="material-icons"> reply </span>
@@ -58,7 +58,7 @@
         <!-- video start -->
         <div class="video">
 
-            <video preload="metadata" autoplay loop muted class="video__player">
+            <video preload="metadata" autoplay loop muted playsinline class="video__player">
                 <source src="https://pic.pikbest.com/19/53/60/56R888piCBzv.mp4" type="video/mp4">
             </video>
             <!-- sidebr -->
@@ -96,7 +96,6 @@
 
         <!-- video/img start -->
         <div class="video">
-            <!-- <video src="./src/assets/video1.mp4" type="video/mp4" class="video__player"></video> -->
             <img src="https://picsum.photos/seed/1/480/840" alt="" class="video__player">
             <!-- sidebr -->
             <div class="videoSidebar">
@@ -202,8 +201,9 @@
         </section>
 
     </div>
+ 
     <div class="footer">
-        <a href="#frist"><span class="material-icons"> home </span></a>
+        <a href="#home"><span class="material-icons"> home </span></a>
         <a href="#politics" class="footer__icon"><span class="material-icons">gavel</span></a>
         <a href="#about" class="footer__icon"><span class="material-icons"> inbox </span></a>
         <a href="#contact" class="footer__icon"><span class="material-icons">contact_page</span></a>
