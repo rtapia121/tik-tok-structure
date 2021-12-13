@@ -15,6 +15,8 @@ body {
   display: grid;
   place-items: center;
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+
 }
 
 .app__videos {
@@ -30,7 +32,6 @@ body {
 
 .app__videos::-webkit-scrollbar {
   display: none;
-  overflow: hidden;
 }
 
 .app__videos {
