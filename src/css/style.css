@@ -15,8 +15,6 @@ body {
   display: grid;
   place-items: center;
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
-
 }
 
 .app__videos {
@@ -28,6 +26,7 @@ body {
   max-width: 400px;
   scroll-snap-type: y mandatory;
   border-radius: 15px;
+  overflow-x: hidden;
 }
 
 .app__videos::-webkit-scrollbar {
