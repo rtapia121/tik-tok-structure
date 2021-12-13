@@ -30,6 +30,7 @@ body {
 
 .app__videos::-webkit-scrollbar {
   display: none;
+  overflow: hidden;
 }
 
 .app__videos {
