@@ -139,7 +139,7 @@ body {
 .footer {
   width: 100%;
   position: fixed;
-  top: 93%;
+  top: 100vh;
   background-color: #000000;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -147,6 +147,8 @@ body {
   text-align: center;
   font-weight: bold;
   max-width: 450px;
+  transform: translate(0,-100%);
+
 }
 
 .footer__icon{
